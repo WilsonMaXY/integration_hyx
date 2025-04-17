@@ -35,7 +35,7 @@ def _verify_response_or_raise(response: aiohttp.ClientResponse) -> None:
     response.raise_for_status()
 
 
-class IntegrationBlueprintApiClient:
+class IntegrationHyxApiClient:
     """Sample API Client."""
 
     def __init__(
@@ -52,8 +52,10 @@ class IntegrationBlueprintApiClient:
     async def async_get_data(self) -> Any:
         """Get data from the API."""
         return await self._api_wrapper(
-            method="get",
+            method="patch",
             url="https://jsonplaceholder.typicode.com/posts/1",
+            data={"title": 888},
+            headers={"Content-type": "application/json; charset=UTF-8"},
         )
 
     async def async_set_title(self, value: str) -> Any:
