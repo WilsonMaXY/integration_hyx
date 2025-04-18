@@ -2,7 +2,7 @@
   "domain": "integration_hyx",
   "name": "Integration hyx",
   "codeowners": [
-    "@Wilson"
+    "@WilsonMaXY"
   ],
   "config_flow": true,
   "documentation": "https://github.com/WilsonMaXY/integration_hyx",
