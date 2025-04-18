@@ -44,7 +44,7 @@ async def async_setup_entry(
         update_interval=timedelta(minutes=1),
     )
     entry.runtime_data = IntegrationBlueprintData(
-        client=IntegrationHyxClient(
+        client=IntegrationHyxApiClient(
             username=entry.data[CONF_USERNAME],
             password=entry.data[CONF_PASSWORD],
             session=async_get_clientsession(hass),
