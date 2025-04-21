@@ -55,3 +55,8 @@ class IntegrationBlueprintSensor(IntegrationBlueprintEntity, SensorEntity):
     def native_value(self) -> str | None:
         """Return the native value of the sensor."""
         return self.coordinator.data.get("body")
+
+    @property
+    def unit_of_measurement(self):
+        """Return the unit of measurement."""
+        return "W"
